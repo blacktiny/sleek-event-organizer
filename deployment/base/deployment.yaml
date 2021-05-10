@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sleek-organizer-app-deployment
+  namespace: sleek-apps
+  labels:
+    app: sleek-organizer-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sleek-organizer-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: sleek-organizer-app
+    spec:
+      containers:
+        - name: sleek-organizer-app
+          image: teamsleek/sleek-organizer-app:main
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: sleek-organizer-app-config-volume
+              mountPath: /usr/share/nginx/html/runtime.js
+              subPath: runtime.js
+              readOnly: true
+      volumes:
+        - name: sleek-organizer-app-config-volume
+          configMap:
+            name: sleek-organizer-app-config
+      imagePullSecrets:
+        - name: sleekdockersecret

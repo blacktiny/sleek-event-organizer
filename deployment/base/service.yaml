@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sleek-organizer-app-alb-service
+  namespace: sleek-apps
+spec:
+  ports:
+    - port: 8086
+      targetPort: 80
+      protocol: TCP
+  type: NodePort
+  selector:
+    app: sleek-organizer-app

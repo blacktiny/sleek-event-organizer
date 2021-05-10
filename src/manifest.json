@@ -1,0 +1,22 @@
+{
+  "name": "Sleek Organizer App",
+  "short_name": "Sleek Organizer App",
+  "display": "standalone",
+  "start_url": "./?utm_source=homescreen",
+  "theme_color": "#002140",
+  "background_color": "#001529",
+  "icons": [
+    {
+      "src": "banner.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "banner.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "banner.png",
+      "sizes": "512x512"
+    }
+  ]
+}

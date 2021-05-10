@@ -1,0 +1,269 @@
+@import '~antd/es/style/themes/default.less';
+
+@btnBorderRadiusBase: 8px;
+@btnPrimaryBg: linear-gradient(314.72deg, #6758f3 -1.5%, #e062f5 100%);
+@btnPrimaryShadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #00000020;
+
+  & > div {
+    padding: 0 !important;
+  }
+}
+
+/* button */
+
+.ant-btn-primary {
+  border-color: transparent !important;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.043) !important;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: @btnPrimaryBg !important;
+  border-color: transparent !important;
+  opacity: 0.9;
+}
+
+/* breadcrumb */
+.ant-breadcrumb {
+  & > span {
+    text-transform: capitalize;
+  }
+}
+
+/* icon */
+
+.ant-pro-global-header-layout-mix .anticon {
+  color: inherit !important;
+}
+
+.ant-menu-item .anticon {
+  font-size: 15px;
+}
+
+/* input */
+
+.ant-input-affix-wrapper {
+  border-radius: 8px !important;
+}
+
+.ant-input-group {
+  .ant-input-affix-wrapper {
+    border-radius: 2px 0 0 2px !important;
+  }
+
+  .ant-input-group-addon {
+    border-radius: 0 2px 2px 0 !important;
+  }
+}
+
+// Custom
+.ant-input-group-wrapper.take-url {
+  .ant-input-group {
+    .ant-input {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      border-radius: 8px 0 0 8px;
+    }
+    .ant-input-group-addon {
+      height: 100%;
+      padding: 0;
+      border: none;
+
+      button {
+        height: 40px !important;
+        border-radius: 0 8px 8px 0 !important;
+      }
+    }
+  }
+}
+
+/* layout */
+.ant-layout-content {
+  .hide-page-header {
+    .ant-page-header {
+      display: none;
+    }
+  }
+}
+
+/* menu */
+
+.ant-menu-inline .ant-menu-item {
+  height: fit-content;
+  margin: 0 !important;
+  padding-left: 30px !important;
+
+  .menu-item-group-title {
+    margin: 8px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent !important;
+  }
+}
+
+.ant-menu-item:not(.ant-menu-item-only-child) {
+  display: none;
+}
+
+/* modal */
+.ant-modal-wrap {
+  background: rgba(36, 36, 37, 0.8);
+  backdrop-filter: blur(15px);
+}
+
+.ant-modal-content {
+  max-width: 427px;
+  border-radius: 15px !important;
+}
+
+.ant-modal-header {
+  display: none;
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.no-max-width {
+  width: 1200px !important;
+
+  .ant-modal-content {
+    max-width: inherit;
+  }
+}
+
+/* select */
+
+.ant-select.custom {
+  .ant-select-selector {
+    min-width: 200px;
+    height: 42px !important;
+    border-radius: 8px !important;
+  }
+
+  .ant-select-selection-search {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ant-select.custom-multi {
+  .ant-select-selection-overflow-item {
+    display: none;
+  }
+}
+
+/* sider */
+
+.ant-layout-sider-children {
+  margin-top: 30px;
+}
+
+/* watermark */
+.ant-pro-layout-watermark {
+  display: none;
+}
+
+@media (max-width: @screen-lg) {
+  .ant-page-header-heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ant-page-header-heading-extra {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      margin: 0.5rem 1rem 0.5rem 0 !important;
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .ant-page-header-heading-extra {
+    & > * {
+      width: 100% !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .ant-dropdown {
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  /* date time picker */
+  .ant-picker-datetime-panel {
+    flex-direction: column !important;
+  }
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}

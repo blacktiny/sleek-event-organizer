@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  env: staging
+
+configMapGenerator:
+- files:
+  - runtime.js=app.properties
+  name: sleek-organizer-app-config
+  namespace: sleek-apps
+
+images:
+- name: teamsleek/sleek-organizer-app
+  newName: teamsleek/sleek-organizer-app
+  newTag: sha-ad2d003
+
+patchesJson6902:
+- path: ingress-host-setup.yaml
+  target:
+    group: extensions
+    kind: Ingress
+    name: sleek-organizer-app-ingress
+    namespace: sleek-apps
+    version: v1beta1
+resources:
+- ../base
