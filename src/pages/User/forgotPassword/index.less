@@ -1,0 +1,77 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  width: 328px;
+  margin: 0 auto;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+    max-width: 328px;
+  }
+
+  :global {
+    .@{ant-prefix}-tabs-nav-list {
+      margin: auto;
+      font-size: 16px;
+    }
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 40px;
+    background: linear-gradient(314.72deg, #6758f326 -1.5%, #e062f526 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.043);
+  }
+
+  .headerTitle {
+    font-size: 30px;
+    line-height: 28px;
+  }
+
+  .headerSubtitle {
+    margin-bottom: 2em;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .prefixIcon {
+    color: @primary-color;
+    font-size: @font-size-base;
+  }
+}
+
+.mail {
+  width: 240px;
+}
+
+.mailButton {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 16px;
+  padding: 8px 15px;
+  font-size: 16px;
+}
+
+.resendButton {
+  width: 200px;
+  height: 40px;
+  padding: 8px 15px;
+  color: #8834fd;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: #8834fd;
+    background-color: transparent;
+  }
+}
