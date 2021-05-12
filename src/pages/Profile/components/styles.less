@@ -1,0 +1,53 @@
+.desc {
+  color: #00000073;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.content {
+  input {
+    border-radius: 8px;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .error {
+    color: #ff4d4f;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.label {
+  margin-right: 0.5rem;
+}
+
+.password {
+  & > span {
+    margin-bottom: 15px;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #00000020;
+
+  & > div {
+    padding: 0 !important;
+  }
+}

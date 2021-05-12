@@ -1,0 +1,178 @@
+@import '~antd/es/style/themes/default.less';
+
+.cardContainer {
+  padding: 0 24px 48px;
+  background: #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 72px);
+  margin: 36px;
+
+  .label {
+    text-align: right !important;
+  }
+}
+
+.uploadButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 104px;
+  border: 1px dashed #d9d9d9;
+  border-radius: 2px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .plus {
+    margin-top: -8px;
+    font-size: 24px;
+  }
+}
+
+.logoContainer {
+  position: relative;
+  padding: 9px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.logoEdit {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  bottom: 9px;
+  left: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00000073;
+}
+
+.logoEditButton {
+  margin: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.inputItem {
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+
+  .itemControl {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 120px);
+
+    &.reset {
+      & > input {
+        border-radius: 8px 0 0 8px !important;
+      }
+
+      button {
+        width: auto;
+      }
+    }
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 0 8px 8px 0 !important;
+  }
+
+  input {
+    border-radius: 8px;
+  }
+
+  textarea {
+    border-radius: 8px;
+  }
+}
+
+.label {
+  width: 120px;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  text-align: right;
+}
+
+.buttonControl {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+
+  button {
+    width: 60%;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: @screen-sm) {
+  .logoItem {
+    width: 100%;
+    margin: 36px 0;
+  }
+
+  .uploadButton {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logoEditButton {
+    margin: 10px;
+
+    & span {
+      font-size: 24px;
+    }
+  }
+
+  .inputItem {
+    flex-direction: column;
+    margin-bottom: 12px;
+
+    .itemControl {
+      width: 100%;
+    }
+  }
+
+  .label {
+    width: auto;
+    margin-right: 1rem;
+    text-align: left;
+  }
+
+  .buttonControl {
+    button {
+      width: 100%;
+    }
+  }
+}
