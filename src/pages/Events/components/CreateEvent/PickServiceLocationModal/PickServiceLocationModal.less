@@ -1,0 +1,90 @@
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  margin: -24px;
+}
+
+.header {
+  padding: 14px 25px;
+  border-bottom: 1px solid #d9d9d9;
+  border-radius: 15px 15px 0 0;
+  box-shadow: inset 0 -1px 0 #d9d9d9;
+}
+
+.title {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+
+  .map {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .locationMark {
+      position: absolute;
+      visibility: hidden;
+      width: 15px;
+      height: 15px;
+      background: #6d5cff;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .noMap {
+    width: 100%;
+    font-size: 20px;
+    color: #00000040;
+    margin: 20px auto;
+    text-align: center;
+  }
+}
+
+.select {
+  width: 100%;
+  border-radius: 8px;
+
+  & > div {
+    border-radius: 8px !important;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 40px;
+  padding: 0 30px 30px;
+
+  button {
+    width: 176px;
+    margin-left: 8px;
+  }
+
+  .cancelButton {
+    margin-left: auto;
+    color: #7b5af4;
+    border: 1px solid #7b5af4;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.016);
+
+    &:hover {
+      color: #5930eb;
+      border-color: #5930eb;
+    }
+  }
+}
